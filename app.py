@@ -19,6 +19,6 @@ def get_response():
     response = chat_session.send_message(msg)
     return jsonify(response=response.text)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
